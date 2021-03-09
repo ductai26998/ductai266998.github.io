@@ -12,10 +12,12 @@ body {
 
 .container {
     position: fixed;
-    transform: translate(50%, 50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgb(39, 190, 237);
-    height: 50vh;
-    width: 50vw;
+    height: 60vh;
+    width: 60vw;
     padding-top: 20px;
 }
 
