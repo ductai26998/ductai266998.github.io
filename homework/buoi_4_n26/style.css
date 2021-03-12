@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -33,6 +35,11 @@ body {
     background-color: #242526;
 }
 
+.navbar li:hover{
+    background-color: #3a3b3c;
+    cursor: pointer;
+}
+
 .logo {
     position: absolute;
     height: 40px;
@@ -41,6 +48,7 @@ body {
     font-size: 42px;
     color: #046ee4;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .logo i {
@@ -81,7 +89,11 @@ body {
 .search form input {
     width: 100%;
     background-color: transparent;
-    border: 0
+    border: 0;
+    font-size: 15px;
+    margin-left: 5px;
+    outline: none;
+    color: #999792;
 }
 
 .center {
@@ -90,6 +102,7 @@ body {
     position: relative;
     height: 100%;
     right: 0;
+    padding-left: 50px;
 }
 
 .center-navbar {
@@ -108,11 +121,15 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    margin: 5px 5px;
+    margin-top: 5px;
+    border-bottom: solid 5px #242526;
 }
 
-.center-navbar li:hover {
-    background-color: #3a3b3c;
+.center-navbar li:focus {
+    color: #2e89ff;
+    border-radius: unset;
+    border-bottom: solid 5px #2e89ff;
+    outline: none;
 }
 
 .right-navbar {
@@ -135,15 +152,20 @@ body {
     justify-content: center;
     border-radius: 50%;
     margin-right: 10px;
-    background-color: #3a3b3c;
+    background-color: #2f2f30;
 }
 
-.right-navbar li:first-of-type {
+.right-navbar .profile {
     width: auto;
     border-radius: 20px;
     position: relative;
+    background-color: #242526;
+}
+
+.right-navbar .profile:focus {
     background-color: #283752;
     color: #2e89ff;
+    outline: none;
 }
 
 .avt {
@@ -182,6 +204,42 @@ body {
     width: 100vw;
     max-width: 940px;
     background-image: url(bia.jpg);
+    cursor: pointer;
+    position: relative;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cover .cover-update {
+    height: 36px;
+    width: 180px;
+    border-radius: 10px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    background-color: #6262645e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover .cover-update:hover {
+    background-color: #a5a6ac86;
+    cursor: pointer;
+}
+
+.content .avt-bgr {
+    height: 158px;
+    width: 158px;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: #fff;
+    opacity: 0;
+    border-radius: 50%;
 }
 
 .content .avt {
@@ -196,6 +254,11 @@ body {
     margin-right: auto; 
 }
 
+.content .avt-bgr:hover {
+    cursor: pointer;
+    opacity: 0.1;
+}
+
 .content .avt .change {
     height: 36px;
     width: 36px;
@@ -206,8 +269,13 @@ body {
 }
 
 .content .avt .bgr-icon {
-    background-color: #4b4c4f;
-    opacity: 0.5;
+    background-color: #fff;
+    opacity: 0.1;
+}
+
+.content .avt .icon:hover {
+    background-color: #a5a6ac86;
+    cursor: pointer;
 }
 
 .content .avt .icon {
@@ -221,6 +289,7 @@ body {
 .content h1 {
     color: #e4e6eb;
     margin-bottom: 6px;
+    margin-top: 15px;
 }
 
 .content h1 span {
@@ -264,10 +333,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: solid 3px #242526;
 }
 
 .menu .left {
     left: 0;
+    margin: 0;
 }
 
 .menu .left li {
@@ -281,9 +352,16 @@ body {
 
 .menu .left li:hover {
     color: #2e89ff;
-    border-bottom: solid 3px #2e89ff;
-    margin-bottom: -3px;
     border-radius: unset;
+    cursor: pointer;
+    border-bottom: solid 3px #2e89ff;
+}
+
+.menu .left li:focus {
+    color: #2e89ff;
+    border-radius: unset;
+    border-bottom: solid 3px #2e89ff;
+    outline: none;
 }
 
 .menu .right {
@@ -297,6 +375,11 @@ body {
     width: 48px;
     height: 36px;
     margin-left: 8px;
+}
+
+.menu .right li:hover {
+    background-color: #4a4a4b;
+    cursor: pointer;
 }
 
 /*Chat box*/
@@ -326,4 +409,50 @@ body {
 
 .chatbox .chat-2 {
     background-image: url(c1.png);
+}
+
+.navbar-tooltip {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.685);
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 105%;
+    font-size: 0.9375rem;
+    height: 30px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.center-navbar li:hover .navbar-tooltip {
+    visibility: visible;
+}
+
+.chat-tooltip {
+    visibility: hidden;
+    background-color: #242526;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    right: 105%;
+    font-size: 0.9375rem;
+    height: 48px;
+    width: 100px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.chatbox .avt:hover .chat-tooltip {
+    visibility: visible;
+}
+
+.chatbox .avt:first-of-type:hover {
+    background-color: #757472;
 }
