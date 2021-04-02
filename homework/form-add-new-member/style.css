@@ -43,6 +43,7 @@ body {
     margin-bottom: 10px;
     border-radius: 7px;
     border: none;
+    padding-left: 10px;
 }
 
 .container::after {
@@ -75,6 +76,7 @@ body {
     color: #fff;
     font-size: 17px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .container table {
