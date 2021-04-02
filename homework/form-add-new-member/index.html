@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #fff; text-shadow: #111 4px 4px;">ADD MEMBER</h1>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="name">
+            <label for="age">Age</label>
+            <input type="text" id="age" class="age"> 
+            <label for="university">University</label> 
+            <input type="text" id="university" class="university">
+            <label for="phone">Number phone</label>
+            <input type="text" id="phone" class="phone">
+                
+        </form>
+        <div class="button-container">
+            <button id="btn">Add</button>   
+        </div>  
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>University</th>
+                <th>Phone</th>
+            </tr>
+            <tr id="data"></tr>
+        </table>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="close" class="close">&times;</span>
+                    <h2>ERROR</h2>
+                  </div>
+                  <div class="modal-body">
+                    <p id="error"></p>
+                  </div>
+            </div>
+          
+          </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
