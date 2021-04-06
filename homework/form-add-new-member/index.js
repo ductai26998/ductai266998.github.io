@@ -6,18 +6,21 @@ document.getElementById("name").value = localStorage.getItem("name");
 document.getElementById("age").value = localStorage.getItem("age");
 document.getElementById("university").value = localStorage.getItem("university");
 document.getElementById("phone").value = localStorage.getItem("phone");
+document.getElementById("data").innerHTML = localStorage.getItem("text");
 
 var members = [];
 
 function display(members) {
-    let text = "";
+    console.log(members);
+    let text = "<tr><th>Name</th><th>Age</th><th>University</th><th>Phone</th></tr>";
     for(let i = 0; i < members.length; i++) {
-        text = "<td>" + members[i].name + "</td>" +
+        text += "<tr><td>" + members[i].name + "</td>" +
         "<td>" + members[i].age + "</td>" +
         "<td>" + members[i].university + "</td>" +
-        "<td>" + members[i].phone + "</td>";
+        "<td>" + members[i].phone + "</td></tr>";
     }
-   console.log(text);
+    console.log(text);
+    localStorage.setItem("text", text);
     document.getElementById("data").innerHTML = text;
     
 }
@@ -40,7 +43,7 @@ function addMember() {
     if (/\d/.test(name)) {
         error += "Name is invalid !!! <br>";
     }
-    if (parseInt(age) > 30) {
+    if (parseInt(age) > 30 || /\D/.test(age)) {
         error += "Age is invalid !!! <br>";
     }
     if (/\D/.test(phone)) {
@@ -57,7 +60,6 @@ function addMember() {
             phone: phone
         };
         members.push(member);
-        console.log("aaaaaaaaa" + members.length);
         display(members);
     }
 
