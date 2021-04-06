@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #fff; text-shadow: #111 4px 4px;">ADD USER</h1>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="name">                
+
+        </form>
+        <div class="button-container">
+            <button type="submit" id="submit">Submit</button>
+        </div>  
+        <div class="data-container">
+            <ul id="data"></ul>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="close" class="close">&times;</span>
+                    <h2>ERROR</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p id="error"></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
