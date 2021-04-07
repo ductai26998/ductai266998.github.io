@@ -56,7 +56,11 @@ async function postAPI() {
     console.log("post");
     let name = document.getElementById("name").value;
 
-    if (name != "") {
+    if (name == "") {
+        error = "Name is invalid !!!";
+    }
+    else {
+        error = "";
         let newUser = {
             "name": name
         }
@@ -65,7 +69,7 @@ async function postAPI() {
         } catch(err) {
             error = "POST: " + err;
         }
-    } else error = "Name is invalid !!!";
+    }
     
 }
 
