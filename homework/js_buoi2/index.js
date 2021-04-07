@@ -58,8 +58,7 @@ async function postAPI() {
 
     if (name == "") {
         error = "Name is invalid !!!";
-    }
-    else {
+    } else {
         error = "";
         let newUser = {
             "name": name
