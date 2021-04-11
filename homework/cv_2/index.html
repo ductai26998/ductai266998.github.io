@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,17 @@
     <script src="https://kit.fontawesome.com/34949473b1.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="header-left">BC</div>
         <div class="header-center">
             <ul class="menu">
-                <li class="home">
+                <li class="home home-area">
                     <i class="fas fa-home"></i>
                     <span>HOME</span>
                 </li>
-                <li class="about">
+                <li class="about about-area">
                     <i class="fas fa-user-alt"></i>
                     <span>ABOUT</span>
                 </li>
@@ -54,7 +56,7 @@
             </ul>
             <div class="copy">Copyright © 2019 Clarks, All rights Reserved.</div>
         </div>
-        <div class="header-right" tabindex="1">
+        <div id="btn-select-section" class="header-right" tabindex="1">
             <div class="header-right-line-1"></div>
             <div class="header-right-line-2"></div>
             <div class="header-right-line-3"></div>
@@ -66,14 +68,14 @@
 
     <!-- Main -->
     <main>
-        <section class="section-home">
+        <section class="section section-home home-area">
             <div class="home-container">
                 <div class="avatar"></div>
                 <div class="name">BRANDON CLARKS</div>
                 <div class="job">WEB DEVELOPER</div>
             </div>
         </section>
-        <section class="section-about">
+        <section class="section section-about about-area">
             <div class="about-container">
                 <h1 class="about-title">ABOUT</h1>
                 <div class="about-item about-info">
@@ -82,13 +84,14 @@
                     </div>
                     <div class="about-info-profile">
                         <h3 class="about-info-job">Web Designer & Developer</h3>
-                        <p class="about-info-description">Hello! I’m <span class="stress">Brandon Clarks</span>. Web Developer with over 8 years of experience. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including advanced <span class="stress">HTML5, CSS3, JavaScript, jQuery, Angular JS</span>. I aim to make a difference through my creative solution.</p>
+                        <p class="about-info-description">Hello! I’m <span class="stress">Brandon Clarks</span>. Web Developer with over 8 years of experience. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including advanced
+                            <span class="stress">HTML5, CSS3, JavaScript, jQuery, Angular JS</span>. I aim to make a difference through my creative solution.</p>
                         <div class="about-info-base">
                             <p><span>Name</span><span>:</span>Brandon Clarks</p>
                             <p><span>Phone</span><span>:</span>+123 456 789 012</p>
                             <p><span>Age</span><span>:</span> Years</p>
                             <p><span>Address</span><span>:</span> Lorem Ipsum</p>
-                            <p><span>Email</span><span>:</span>@example.com</p>
+                            <p><span>Email</span><span>:</span>example@example.com</p>
                             <p><span>Freelance</span><span>:</span>Available</p>
                         </div>
                         <button class="about-info-btn">DOWNLOAD CV</button>
@@ -124,7 +127,8 @@
                     <div class="about-testimonials-content">
                         <div class="testimonial-item per-1">
                             <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
+                                    arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
                             </div>
                             <div class="person">
                                 <div class="person-info">
@@ -145,7 +149,8 @@
                         </div>
                         <div class="testimonial-item per-1">
                             <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
+                                    arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
                             </div>
                             <div class="person">
                                 <div class="person-info">
@@ -168,10 +173,39 @@
                 </div>
                 <div class="about-item about-clients">
                     <h3 class="about-sub-title">Clients</h3>
-                    
+                    <ul class="client-container">
+                        <li class="client-item">
+                            <img src="./images/client-01.png" alt="">
+                        </li>
+                        <li class="client-item">
+                            <img src="./images/client-02.png" alt="">
+                        </li>
+                        <li class="client-item">
+                            <img src="./images/client-03.png" alt="">
+                        </li>
+                        <li class="client-item">
+                            <img src="./images/client-04.png" alt="">
+                        </li>
+                        <li class="client-item">
+                            <img src="./images/client-05.png" alt="">
+                        </li>
+                        <li class="client-item">
+                            <img src="./images/client-06.png" alt="">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
+        <!-- <section class="section section-home">
+            <div class="home-container">
+                <div class="avatar"></div>
+                <div class="name">BRANDON CLARKS</div>
+                <div class="job">WEB DEVELOPER</div>
+            </div>
+        </section> -->
     </main>
+
+    <script src="index.js"></script>
 </body>
+
 </html>

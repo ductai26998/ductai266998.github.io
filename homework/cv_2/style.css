@@ -3,9 +3,9 @@
     --background-color-2: #2a2b30;
     --background-color-3: #181818;
     --background-color-4: #2a2b30;
-
     --text-color-1: #fff;
-    --text-color-2: #888; /*color of header*/
+    --text-color-2: #888;
+    /*color of header*/
     --text-color-3: #e1e1e1;
     --text-color-4: #d94c48;
 }
@@ -15,15 +15,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    outline: none;
 }
 
 body {
+    overflow: hidden;
+    height: 100vh;
     background-color: var(--background-color-1);
+    position: relative;
 }
 
-header {
-
-}
+header {}
 
 .header-left {
     height: 50px;
@@ -108,36 +110,17 @@ header {
     padding: 12px 7px;
 }
 
-.header-right-line-1, .header-right-line-3 {
+.header-right-line-1,
+.header-right-line-3 {
     width: 35px;
     background-color: #fff;
     border: solid 1.5px #fff;
-
 }
 
 .header-right-line-2 {
     background-color: #fff;
     width: 30px;
     border: solid 1.5px #fff;
-
-}
-
-.header-right:focus .header-right-line-1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) rotate(45deg);
-}
-
-.header-right:focus .header-right-line-2 {
-    visibility: hidden;
-}
-
-.header-right:focus .header-right-line-3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) rotate(-45deg);
 }
 
 .setting-themes {
@@ -155,7 +138,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .setting-themes i {
@@ -165,14 +147,11 @@ header {
     animation-timing-function: linear;
 }
 
+
 /************ Main ****************/
-.header-right:active .section-home {
-    transform: scale(0.8);
-}
 
 .section-home {
-    visibility: hidden;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -231,6 +210,7 @@ header {
 }
 
 .section-about {
+    visibility: hidden;
     background-color: var(--background-color-4);
     width: 100%;
     position: absolute;
@@ -303,13 +283,12 @@ header {
 .about-info .stress {
     color: var(--text-color-4);
     font-weight: bold;
-
 }
 
 .about-info-base {
     display: grid;
     grid-template-columns: auto auto;
-} 
+}
 
 .about-info-base p {
     margin: 5px 0;
@@ -375,7 +354,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding:0 20px 20px 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .about-services-content .service-col i {
@@ -426,9 +405,7 @@ header {
     line-height: 1.5;
     letter-spacing: 0.5px;
     background-color: #323338;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05),
-                0 6px 5px rgba(0, 0, 0, 0.04),
-                0 12px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 6px 5px rgba(0, 0, 0, 0.04), 0 12px 10px rgba(0, 0, 0, 0.06);
 }
 
 .testimonial-item .description::before {
@@ -501,10 +478,39 @@ header {
     text-align: center;
 }
 
+.about-clients .client-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.about-clients .client-item {
+    height: 124px;
+    width: 165px;
+    padding: 10px;
+    border: solid 2px #e1e1e11a;
+}
+
+.about-clients .client-item:hover {
+    border: solid 2px rgba(255, 255, 255, 0.3);
+}
+
+.about-clients .client-item img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    filter: opacity(0.2) contrast(0%) brightness(300%) drop-shadow(0 0 0 #fff);
+}
+
+
 /*++++++++++++++++++++++++ animation ++++++++++++++++++++++++++++++++++*/
 
 @keyframes rotate-setting-themes {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-
