@@ -37,6 +37,8 @@ function scaleSection() {
         let headerLinks = document.querySelector(".social-links");
         let headerCopy = document.querySelector(".copy");
 
+        document.querySelector("body").style.overflow = "hidden";
+
         // tao animation header center
         headerMenu.style = `animation-name: menu-show;
                             animation-duration: 1s;
@@ -57,29 +59,34 @@ function scaleSection() {
         for (let i = 0; i < sections.length; i++) {
             sections[i].style = `visibility: visible;
                                 position = absolute;
-                                transition-duration: 0.5s;`;
+                                transition-duration: 0.5s;
+                                cursor: pointer;`;
             if (sections[i] == sectionPresent) present = i;
         }
 
-        sectionPresent.style.transform = "scale(0.85)";
-        sectionPresent.style.top = "255px";
+        sectionPresent.style.transform = "scaleX(0.85)";
+        sectionPresent.style.top = "355px";
         sectionPresent.style.zIndex = 3;
 
         if (sections[present + 1]) {
-            sections[present + 1].style.transform = "scale(0.8)";
-            sections[present + 1].style.top = "125px";
+            sections[present + 1].style.transform = "scaleX(0.8)";
+            sections[present + 1].style.top = "320px";
             sections[present + 1].style.zIndex = 2;
 
         } else {
-            sections[0].style.transform = "scale(0.8)";
-            sections[0].style.top = "275px";
+            sections[0].style.transform = "scaleX(0.8)";
+            sections[0].style.top = "320px";
             sections[0].style.zIndex = 2;
         }
 
         if (sections[present + 2]) {
-            sections[present + 2].style.transform = "scale(0.75)";
-            sections[present + 2].style.top = "169px";
+            sections[present + 2].style.transform = "scaleX(0.75)";
+            sections[present + 2].style.top = "320px";
             sections[present + 2].style.zIndex = 1;
+        } else {
+            sections[present + 1].style.transform = "scaleX(0.75)";
+            sections[present + 1].style.top = "320px";
+            sections[present + 1].style.zIndex = 1;
         }
 
         for (let i = 0; i < homeAreas.length; i++) {
@@ -90,6 +97,7 @@ function scaleSection() {
                 headerMenu.style = ``;
                 headerLinks.style = ``;
                 headerCopy.style = ``;
+                homeAreas[1].style.cursor = "auto";
             });
         }
 
@@ -101,6 +109,7 @@ function scaleSection() {
                 headerMenu.style = ``;
                 headerLinks.style = ``;
                 headerCopy.style = ``;
+                aboutAreas[1].style.cursor = "auto";
             });
 
         }

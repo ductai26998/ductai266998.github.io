@@ -16,6 +16,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
     outline: none;
+    overflow-wrap: break-word;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
     height: 100vh;
     background-color: var(--background-color-1);
     position: relative;
+    min-width: 730px;
 }
 
 header {}
@@ -43,6 +45,7 @@ header {}
     color: var(--text-color-1);
     z-index: 99;
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .header-center {
@@ -71,6 +74,7 @@ header {}
     height: 100%;
     width: 100px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .menu li span {
@@ -95,6 +99,7 @@ header {}
     height: 100%;
     width: 70px;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .header-center .copy {
@@ -117,6 +122,7 @@ header {}
     z-index: 99;
     opacity: 0.8;
     padding: 12px 7px;
+    cursor: pointer;
 }
 
 .header-right-line-1,
@@ -147,6 +153,7 @@ header {}
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .setting-themes i {
@@ -218,6 +225,8 @@ header {}
     font-family: serif;
 }
 
+/*-----------section about------------*/
+
 .section-about {
     visibility: hidden;
     background-color: var(--background-color-4);
@@ -276,6 +285,7 @@ header {}
     grid-template-rows: auto auto auto auto;
     letter-spacing: 0.5px;
     margin-left: 15px;
+    padding-right: 15px;
 }
 
 .about-info-job {
@@ -324,6 +334,7 @@ header {}
     font-size: 16px;
     font-weight: bold;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .about-services {
@@ -391,20 +402,18 @@ header {}
 }
 
 .about-testimonials-content {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .testimonial-item {
-    width: 555px;
+    width: 100%;
     padding: 0 15px;
 }
 
 .testimonial-item .description {
     position: relative;
-    width: 525px;
+    width: 100%;
     height: 205px;
     padding: 45px 35px;
     border-radius: 5px;
@@ -437,7 +446,7 @@ header {}
 }
 
 .testimonial-item .person {
-    width: 525px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding-top: 24px;
@@ -499,6 +508,7 @@ header {}
     width: 165px;
     padding: 10px;
     border: solid 2px #e1e1e11a;
+    cursor: pointer;
 }
 
 .about-clients .client-item:hover {
