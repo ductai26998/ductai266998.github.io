@@ -66,28 +66,28 @@ function scaleSection() {
 
         sectionPresent.style.transform = "scaleX(0.85)";
         sectionPresent.style.top = "355px";
-        sectionPresent.style.zIndex = 3;
+        sectionPresent.style.zIndex = 2;
 
         if (sections[present + 1]) {
             sections[present + 1].style.transform = "scaleX(0.8)";
             sections[present + 1].style.top = "320px";
-            sections[present + 1].style.zIndex = 2;
+            sections[present + 1].style.zIndex = 1;
 
         } else {
             sections[0].style.transform = "scaleX(0.8)";
             sections[0].style.top = "320px";
-            sections[0].style.zIndex = 2;
+            sections[0].style.zIndex = 1;
         }
 
-        if (sections[present + 2]) {
-            sections[present + 2].style.transform = "scaleX(0.75)";
-            sections[present + 2].style.top = "320px";
-            sections[present + 2].style.zIndex = 1;
-        } else {
-            sections[present + 1].style.transform = "scaleX(0.75)";
-            sections[present + 1].style.top = "320px";
-            sections[present + 1].style.zIndex = 1;
-        }
+        // if (sections[present + 2]) {
+        //     sections[present + 2].style.transform = "scaleX(0.75)";
+        //     sections[present + 2].style.top = "285px";
+        //     sections[present + 2].style.zIndex = 0;
+        // } else {
+        //     sections[1].style.transform = "scaleX(0.75)";
+        //     sections[1].style.top = "285px";
+        //     sections[1].style.zIndex = 0;   
+        // }
 
         for (let i = 0; i < homeAreas.length; i++) {
             homeAreas[i].addEventListener("click", function() {
