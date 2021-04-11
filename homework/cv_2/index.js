@@ -66,16 +66,22 @@ function scaleSection() {
 
         sectionPresent.style.transform = "scaleX(0.85)";
         sectionPresent.style.top = "355px";
+        sectionPresent.style.height = "100%";
+        sectionPresent.style.overflow = "hidden";
         sectionPresent.style.zIndex = 2;
 
         if (sections[present + 1]) {
             sections[present + 1].style.transform = "scaleX(0.8)";
             sections[present + 1].style.top = "320px";
+            sections[present + 1].style.height = "100%";
+            sections[present + 1].style.overflow = "hidden";
             sections[present + 1].style.zIndex = 1;
 
         } else {
             sections[0].style.transform = "scaleX(0.8)";
             sections[0].style.top = "320px";
+            sections[0].style.height = "100%";
+            sections[0].style.overflow = "hidden";
             sections[0].style.zIndex = 1;
         }
 
@@ -110,6 +116,7 @@ function scaleSection() {
                 headerLinks.style = ``;
                 headerCopy.style = ``;
                 aboutAreas[1].style.cursor = "auto";
+                aboutAreas[1].style.height = "auto";
             });
 
         }
