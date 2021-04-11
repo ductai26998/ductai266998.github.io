@@ -28,11 +28,31 @@ function selectSection(scaleSection, restoreSection) {
 function scaleSection() {
     return new Promise(function() {
         console.log("scale");
+
         let sections = document.querySelectorAll(".section");
         let sectionPresent = document.querySelector("#section-present");
         let homeAreas = document.querySelectorAll(".home-area");
         let aboutAreas = document.querySelectorAll(".about-area");
+        let headerMenu = document.querySelector(".menu");
+        let headerLinks = document.querySelector(".social-links");
+        let headerCopy = document.querySelector(".copy");
+
+        // tao animation header center
+        headerMenu.style = `animation-name: menu-show;
+                            animation-duration: 1s;
+                            animation-timing-function: ease-in;
+                            animation-fill-mode: forwards;`;
+        headerLinks.style = `animation-name: social-links-show;
+                            animation-duration: 1s;
+                            animation-timing-function: ease-in;
+                            animation-fill-mode: forwards;`;
+        headerCopy.style = `animation-name: copy-show;
+                            animation-duration: 1s;
+                            animation-timing-function: ease-in;
+                            animation-fill-mode: forwards;`;
+        // phong to thu nho section 
         let present = 0;
+        
 
         for (let i = 0; i < sections.length; i++) {
             sections[i].style = `visibility: visible;
@@ -67,6 +87,9 @@ function scaleSection() {
                 restoreSection("section-home");
                 document.querySelector(".section-home").id = "section-present";
                 document.querySelector("body").style.overflow = "hidden";
+                headerMenu.style = ``;
+                headerLinks.style = ``;
+                headerCopy.style = ``;
             });
         }
 
@@ -75,7 +98,9 @@ function scaleSection() {
                 restoreSection("section-about");
                 document.querySelector(".section-about").id = "section-present";
                 document.querySelector("body").style.overflow = "visible";
-                console.log("test");
+                headerMenu.style = ``;
+                headerLinks.style = ``;
+                headerCopy.style = ``;
             });
 
         }

@@ -51,9 +51,12 @@ header {}
     text-align: center;
     padding: 31.6px;
     color: var(--text-color-2);
+    position: relative;
 }
 
 .header-center .menu {
+    position: relative;
+    top: 10px;
     height: 50px;
     width: 100%;
     display: flex;
@@ -61,6 +64,7 @@ header {}
     flex-direction: row;
     list-style-type: none;
     margin-top: 20px;
+
 }
 
 .menu li {
@@ -77,11 +81,14 @@ header {}
 }
 
 .social-links {
+    position: relative;
+    top: 20px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
     justify-content: center;
     margin: 30px;
+
 }
 
 .social-links li {
@@ -91,6 +98,8 @@ header {}
 }
 
 .header-center .copy {
+    position: relative;
+    top: 30px;
     font-size: 14px;
 }
 
@@ -512,5 +521,32 @@ header {}
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes menu-show {
+    from {
+        top: 20px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes social-links-show {
+    from {
+        top: 30px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes copy-show {
+    from {
+        top: 40px;
+    }
+    to {
+        top: 0px;
     }
 }
