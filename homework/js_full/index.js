@@ -63,3 +63,86 @@ document.getElementById("btn-5").addEventListener("click", function() {
 })
 
 
+// Bai 6
+let arr = [1,2,3,4,5,4,3,2,3];
+
+// Bai 7
+document.getElementById("btn-7").addEventListener("click", function() {
+    let str = document.getElementById("input-7").value;
+    let rs = "chuoi khong chua 'java'";
+    if (str.includes('java')) {
+        rs = "chuoi co chua 'java'";
+    }
+    document.getElementById("rs-bai-7").innerHTML = rs;
+})
+
+//Bai 8
+document.getElementById("btn-8").addEventListener("click", function() {
+    let str = document.getElementById("input-8").value;
+    let rs = "";
+    switch(parseInt(str)) {
+        case 1: rs = "Thang mot";break;
+        case 2: rs = "Thang hai";break;
+        case 3: rs = "Thang ba";break;
+        case 4: rs = "Thang bon";break;
+        case 5: rs = "Thang nam";break;
+        case 6: rs = "Thang sau";break;
+        case 7: rs = "Thang bay";break;
+        case 8: rs = "Thang tam";break;
+        case 9: rs = "Thang chin";break;
+        case 10: rs = "Thang muoi";break;
+        case 11: rs = "Thang muoi mot";break;
+        case 12: rs = "Thang muoi hai";break;
+        default: rs = "So khong hop le";
+    }
+    document.getElementById("rs-bai-8").innerHTML = rs;
+})
+
+//Bai 9
+document.getElementById("btn-9").addEventListener("click", function() {
+    let str = document.getElementById("input-9").value;
+    let arr= str.split(" ");
+    let tempArr = arr.map(function(x) {
+        return x.length;
+    })
+    let maxLength = Math.max(...tempArr);
+    let rs = arr.filter(function(x) {
+        return x.length == maxLength;
+    })
+
+    document.getElementById("rs-bai-9").innerHTML = rs;
+})
+
+//Bai 10
+
+document.getElementById("btn-10").addEventListener("click", function() {
+    let num1 = parseInt(document.getElementById("so-1").value);
+    let num2 = parseInt(document.getElementById("so-2").value);
+    let start = 0;
+    let end = 0;
+    let rs = [];
+
+    if (num1 > num2) {
+        start = num2;
+        end = num1;
+    } else {
+        start = num1;
+        end = num2;
+    }
+    for (let i = start + 1; i < end; i++) {
+        if (checkSNT(i)) rs.push(i);
+    }
+
+    document.getElementById("rs-bai-10").innerHTML = rs;
+})
+
+function checkSNT(x) {
+    let check = 0;
+    if (x == 2 || x == 3) check = 1;
+    for(let i = 2; i <= Math.sqrt(x); i++) {
+        if (x % i == 0) {
+            check = 0;break;
+        } else check = 1;
+    }
+    return check;
+}
