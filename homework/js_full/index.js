@@ -9,7 +9,7 @@ document.getElementById("btn-1").addEventListener("click", function() {
 document.getElementById("btn-2").addEventListener("click", function() {
     var dt = new Date();
     var d = dt.getDate();
-    var m = dt.getMonth();
+    var m = dt.getMonth() + 1;
     var y = dt.getFullYear();
     
     document.getElementById("rs-bai-2-f1").innerHTML = m + "-" + d + "-" + y;
@@ -22,19 +22,26 @@ document.getElementById("btn-2").addEventListener("click", function() {
 //Bai 3
 document.getElementById("btn-3").addEventListener("click", function() {
     let str = document.getElementById("input-3").value;
-    let strArr = str.split("");
     let rs = "";
+    if (/\D/.test(str)) {
+        rs = "Vui long nhap lai so nguyen";
+    } else {
+        let strArr = str.split("");
 
-    let numArr = strArr.map(function(x) {
-        return parseInt(x);
-    })
-    for (let i = 0; i < numArr.length - 1; i++) {
-        if(numArr[i + 1] - numArr[i] < 0) {
-            rs = "khong la chuoi so tang";
-            break;
+        let numArr = strArr.map(function(x) {
+            return parseInt(x);
+        })
+    
+        
+        for (let i = 0; i < numArr.length - 1; i++) {
+            if(numArr[i + 1] - numArr[i] < 0) {
+                rs = "khong la chuoi so tang";
+                break;
+            }
+            else rs = "la chuoi so tang";
         }
-        else rs = "la chuoi so tang";
     }
+
 
     document.getElementById("rs-bai-3").innerHTML = rs;
 })
