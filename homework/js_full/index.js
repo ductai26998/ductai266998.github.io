@@ -69,9 +69,41 @@ document.getElementById("btn-5").addEventListener("click", function() {
     document.getElementById("rs-bai-5").innerHTML = newStr;
 })
 
-
 // Bai 6
-let arr = [1,2,3,4,5,4,3,2,3];
+document.getElementById("btn-6").addEventListener("click", function() {
+    let str = document.getElementById("input-6").value;
+    let arr = str.split(" ");
+    arr = arr.map(function(x) {
+        return parseInt(x);
+    })
+    arr.sort();
+    let count = 1;
+    let max = 1;
+    let value = [arr[0]];
+    for (let i = 1; i < arr.length; i++) {
+    
+        if (arr[i+1] == arr[i]) {
+            count++;
+        } else {
+            count = 1;
+        }
+    
+        if (count > max) {
+            max = count;
+            value = [arr[i]];
+    
+            console.log(count);
+        } else if (count == max) {
+            value.push(arr[i]);
+        }
+     
+    }
+    console.log(arr);
+    console.log(max);
+    console.log(value);
+    document.getElementById("rs-bai-6").innerHTML = value;
+})
+
 
 // Bai 7
 document.getElementById("btn-7").addEventListener("click", function() {
@@ -153,3 +185,6 @@ function checkSNT(x) {
     }
     return check;
 }
+
+
+
