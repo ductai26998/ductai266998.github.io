@@ -27,8 +27,8 @@ function display() {
     }
     let text = `<tr>
                     <th width="30px">#</th>
-                    <th width="150px">Item Name</th>
-                    <th width="150px">Category</th>
+                    <th width="150px">Name</th>
+                    <th width="150px">University</th>
                     <th width="260px">Image</th>
                     <th width="150px">Action</th>
                 </tr>`;
@@ -44,11 +44,11 @@ function display() {
                         <td width='150px'>
                             <select class="item-category-${items[i].id}" name="category" id="category" disabled="true" >
                                 <option value=${items[i].category}>${items[i].category}</option>items[i]
-                                <option value="Category 1">Category 1</option>
-                                <option value="Category 2">Category 2</option>
-                                <option value="Category 3">Category 3</option>
+                                <option value="Bach Khoa">Bach Khoa</option>
+                                <option value="Kinh Te">Kinh Te</option>
+                                <option value="Su Pham">Su Pham</option>
                             </select>
-                            <p class="error" id="error-category-${items[i].id}">Category is invalid!</p>
+                            <p class="error" id="error-category-${items[i].id}">University is invalid!</p>
                         </td>
                         <td width='260px'>
                             <input class="item-image-${items[i].id}" type="file" name="" id="image-${items[i].id}" onchange="loadFile('image-show-${items[i].id}',event)" hidden="true">
@@ -104,7 +104,6 @@ function add() {
 }
 
 function editItem(id) {
-    console.log("editttttttttt");
     let itemName = document.querySelector(`table .item-name-${id}`);
     let itemCategory = document.querySelector(`table .item-category-${id}`);
     let itemImage = document.querySelector(`table .item-image-${id}`);
@@ -124,7 +123,6 @@ function editItem(id) {
 
     saveButton.addEventListener("click", () => {
         let files = itemImage.files;
-        console.log("newimageurl: " + files[0]);
         let error = validate(itemName.value, itemCategory.value, itemImage, `-${id}`, false);
         if (!error) {
             let newImageURL = files[0] ? URL.createObjectURL(files[0]) : "";
@@ -147,7 +145,6 @@ function editItem(id) {
 }
 
 function deleteItem(position) {
-    console.log("deleteeeeeeeeee");
     items.splice(position, 1);
     window.localStorage.setItem("items", JSON.stringify(items));
     display();
@@ -155,7 +152,6 @@ function deleteItem(position) {
 
 function loadFile(position, event) {
     document.getElementById(position).src = URL.createObjectURL(event.target.files[0]);
-    console.log(URL.createObjectURL(event.target.files[0]));
 }
 
 function validate(name, category, file, position, isAddFunc) {

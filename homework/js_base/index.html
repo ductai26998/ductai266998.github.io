@@ -14,18 +14,18 @@
         <div class="container-add">
             <form action="">
                 <div class="name add-item">
-                    <label for="">Item name</label>
+                    <label for="">Name</label>
                     <input id="item-name" type="text">
                     <p class="error" id="error-name">Name is invalid!</p>
                 </div>
                 <div class="category add-item">
-                    <label for="">Category</label>
+                    <label for="">University</label>
                     <select name="category" id="category" >
-                        <option value="Category 1">Category 1</option>
-                        <option value="Category 2">Category 2</option>
-                        <option value="Category 3">Category 3</option>
+                        <option value="Bach Khoa">Bach Khoa</option>
+                        <option value="Kinh Te">Kinh Te</option>
+                        <option value="Su Pham">Su Pham</option>
                     </select>
-                    <p class="error" id="error-category">Category is invalid!</p>
+                    <p class="error" id="error-category">University is invalid!</p>
                 </div>
                 <div class="file add-item" id="file">
                     <input type="file" name="" id="image" onchange="loadFile('image-show',event)">
@@ -42,8 +42,8 @@
             <table id="data">
                 <tr>
                     <th width="30px">#</th>
-                    <th width="150px">Item Name</th>
-                    <th width="150px">Category</th>
+                    <th width="150px">Name</th>
+                    <th width="150px">University</th>
                     <th width="260px">Image</th>
                     <th width="150px">Action</th>
                 </tr>
