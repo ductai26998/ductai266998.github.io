@@ -46,7 +46,7 @@ h1 {
     margin: 10px 0px;
 }
 
-tr td {
+tr td,th {
     padding: 20px;
 }
 
