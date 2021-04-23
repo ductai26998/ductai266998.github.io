@@ -40,6 +40,29 @@
         display: block;
     }
 
+    /* ----------------- section resume----------*/
+    .resume-content {
+        grid-template-columns: 100%;
+    }
+
+    /*------------section portfolio-------------*/
+    .portfolio-content {
+        grid-template-columns: 100%;
+    }
+
+    /*-------------section blog--------------------*/
+    .blog-list {
+        grid-template-columns: 100%;
+    }
+
+    /*----------------section contact------------------*/
+    .contact-content-up {
+        grid-template-columns: 100%;
+    }
+
+    .mess-box {
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 730px) {

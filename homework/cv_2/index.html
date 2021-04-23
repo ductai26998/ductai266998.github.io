@@ -24,19 +24,19 @@
                     <i class="fas fa-user-alt"></i>
                     <span>ABOUT</span>
                 </li>
-                <li class="resume">
+                <li class="resume resume-area">
                     <i class="fas fa-address-card"></i>
                     <span>RESUME</span>
                 </li>
-                <li class="portfolio">
+                <li class="portfolio portfolio-area">
                     <i class="fas fa-briefcase"></i>
                     <span>PORTFOLIO</span>
                 </li>
-                <li class="blog">
+                <li class="blog blogs-area">
                     <i class="fas fa-clipboard-list"></i>
                     <span>BLOG</span>
                 </li>
-                <li class="contact">
+                <li class="contact contact-area">
                     <i class="fas fa-envelope"></i>
                     <span>CONTACT</span>
                 </li>
@@ -62,8 +62,24 @@
             <div class="header-right-line-2"></div>
             <div class="header-right-line-3"></div>
         </div>
-        <div class="setting-themes">
-            <i class="fas fa-cog"></i>
+        <div class="setting-themes" id="setting-themes">
+            <div class="setting-icon" id="setting-theme-icon">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="choose-color">
+                <div class="theme-colors">
+                    <h5>THEME COLORS</h5>
+                    <div class="color-list">
+                        <div class="color-item yellow" style="background-color: #f5ae52;"></div>
+                        <div class="color-item red" style="background-color: #d94c48;"></div>
+                        <div class="color-item green" style="background-color: #6ac045;"></div>
+                        <div class="color-item blue" style="background-color: #34a3e1;"></div>
+                        <div class="color-item purple" style="background-color: #bb68c8;"></div>
+                        <div class="color-item sky" style="background-color: #6ff9ff;"></div>
+                    </div>
+                </div>
+                <div class="buy-template">BUY TEMPLATE</div>
+            </div>
         </div>
     </header>
 
@@ -73,7 +89,7 @@
             <div class="home-container">
                 <div class="avatar"></div>
                 <div class="name">BRANDON CLARKS</div>
-                <div class="job">WEB DEVELOPER</div>
+                <span class="job">WEB DEVELOPER</span>
             </div>
         </section>
         <section class="section section-about about-area">
@@ -197,13 +213,347 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="section section-home">
-            <div class="home-container">
-                <div class="avatar"></div>
-                <div class="name">BRANDON CLARKS</div>
-                <div class="job">WEB DEVELOPER</div>
+        <section class="section section-resume resume-area">
+            <div class="resume-container">
+                <h1 class="resume-title">RESUME</h1>
+                <div class="resume-content">
+                    <div class="resume-item">
+                        <h3 class="resume-sub-title">Experience</h3>
+                        <div class="resume-item-container-option-1">
+                            <div class="experience resume-item-option-1">
+                                <h4>LEAD UI DESIGNER</h4>
+                                <h5>
+                                    <span>2017-2018</span>
+                                    <span>BIG DESIGN COMPANY, NY, USA</span>
+                                </h5>
+                                <p>Sit cupiditate praesentium ex esse nulla Facere fuga perspiciatis eveniet provident neque Ea ratione non minus.</p>
+                            </div>
+                            <div class="experience resume-item-option-1">
+                                <h4>WEB DESIGNER</h4>
+                                <h5>
+                                    <span>2016-2017</span>
+                                    <span>DESIGN COMPANY, LONDON, UK</span>
+                                </h5>
+                                <p>Dolor id atque accusantium ut impedit odit provident soluta voluptatem Veritatis ipsam neque mollitia vero ipsa.</p>
+                            </div>
+                            <div class="experience resume-item-option-1">
+                                <h4>WEB DEVELOPER</h4>
+                                <h5>
+                                    <span>2015-2016</span>
+                                    <span>EXIS DEVELOPMENT, LONDON, UK</span>
+                                </h5>
+                                <p>Consectetur pariatur fugiat ipsam aperiam maiores. Nisi in dignissimos debitis expedita asperiores delectus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <h3 class="resume-sub-title">Education</h3>
+                        <div class="resume-item-container-option-1">
+                            <div class="education resume-item-option-1">
+                                <h4>MA GRAPHICS</h4>
+                                <h5>
+                                    <span>2014-2015</span>
+                                    <span>ROYAL COLLEGE OF ART, LONDON, UK</span>
+                                </h5>
+                                <p>Provident veritatis exercitationem eum doloremque itaque expedita? Ex voluptatem nostrum numquam illum.</p>
+                            </div>
+                            <div class="education resume-item-option-1">
+                                <h4>BA(HONS) GRAPHICS</h4>
+                                <h5>
+                                    <span>2013-2014</span>
+                                    <span>CENTRAL SAINT MARTINS, LONDON, UK</span>
+                                </h5>
+                                <p>Elit voluptatibus quas necessitatibus ullam tenetur provident voluptatibus. Ratione delectus lorem minus ipsa.</p>
+                            </div>
+                            <div class="education resume-item-option-1">
+                                <h4>WEB & GRAPHICS DIPLOMA</h4>
+                                <h5>
+                                    <span>2012-2013</span>
+                                    <span>TECH ARTS INSTITUTE, CA, USA</span>
+                                </h5>
+                                <p>Ipsum ex exercitationem est aliquid eos saepe. Dolorum aperiam cupiditate labore vero deleniti Aut unde deser.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <h3 class="resume-sub-title">Design Skills</h3>
+                        <div class="resume-item-container-option-2">
+                            <div class="skill-item skill-draw">
+                                <h5>CORAL DRAW</h5>
+                                <div class="rate-wrapper">
+                                    <div style="width: 91%;" class="rate"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-pts">
+                                <h5>PHOTOSHOP</h5>
+                                <div class="rate-wrapper">
+                                    <div style="width: 82%;" class="rate"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-illustrator">
+                                <h5>ILLUSTRATOR</h5>
+                                <div class="rate-wrapper">
+                                    <div style="width: 94%;" class="rate"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <h3 class="resume-sub-title">Coding Skills</h3>
+                        <div class="resume-item-container-option-2">
+                            <div class="skill-item skill-html">
+                                <h5>HTML5</h5>
+                                <div class="rate-wrapper">
+                                    <div style="width: 83%;" class="rate"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-css">
+                                <h5>CSS3</h5>
+                                <div class="rate-wrapper">
+                                    <div style="width: 75%;" class="rate"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-js">
+                                <h5>JAVASCRIPT</h5>
+                                <div class="rate-wrapper">
+                                    <div style="width: 92%;" class="rate"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section> -->
+        </section>
+        <section class="section section-portfolio portfolio-area">
+            <div class="portfolio-container">
+                <h1 class="portfolio-title">PORTFOLIO</h1>
+                <ul class="portfolio-menu">
+                    <li class="all" tabindex="1">ALL</li>
+                    <li class="brand" tabindex="1">BRAND</li>
+                    <li class="design" tabindex="1">DESIGN</li>
+                    <li class="graphic" tabindex="1">GRAPHIC</li>
+                </ul>
+                <div class="portfolio-content">
+                    <div class="col">
+                        <div class="portfolio-item-container">
+                            <div class="item item-1">
+                                <img src="images/portfolio/img-1.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-2">
+                                <img src="images/portfolio/img-6.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-3">
+                                <img src="images/portfolio/img-8.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-4">
+                                <img src="images/portfolio/img-10.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-video"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="portfolio-item-container">
+                            <div class="item item-1">
+                                <img src="images/portfolio/img-2.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-2">
+                                <img src="images/portfolio/img-4.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-3">
+                                <img src="images/portfolio/img-7.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-4">
+                                <img src="images/portfolio/img-11.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="portfolio-item-container">
+                            <div class="item item-1">
+                                <img src="images/portfolio/img-3.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-video"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-2">
+                                <img src="images/portfolio/img-5.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-video"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="item item-3">
+                                <img src="images/portfolio/img-9.jpg" alt="">
+                                <div class="project-name">PROJECT NAME</div>
+                                <i class="fas fa-image"></i>
+                                <p>GRAPHIC</p>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-blogs blogs-area">
+            <div class="blogs-container">
+                <h1 class="blogs-title">BLOGS</h1>
+                <div class="blog-list">
+                    <div class="blog-item" tabindex="1">
+                        <img src="images/blogs/img-1.jpg" alt="">
+                        <div class="blog-info">
+                            <h5>TRAVEL</h5>
+                            <h4>Explore the Pacific Northwest</h4>
+                            <p>Posted On March 8, 2015</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <img src="images/blogs/img-2.jpg" alt="">
+                        <div class="blog-info">
+                            <h5>TRAVEL</h5>
+                            <h4>Explore the Pacific Northwest</h4>
+                            <p>Posted On March 8, 2015</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <img src="images/blogs/img-3.jpg" alt="">
+                        <div class="blog-info">
+                            <h5>TRAVEL</h5>
+                            <h4>Explore the Pacific Northwest</h4>
+                            <p>Posted On March 8, 2015</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <img src="images/blogs/img-4.jpg" alt="">
+                        <div class="blog-info">
+                            <h5>TRAVEL</h5>
+                            <h4>Explore the Pacific Northwest</h4>
+                            <p>Posted On March 8, 2015</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <img src="images/blogs/img-5.jpg" alt="">
+                        <div class="blog-info">
+                            <h5>TRAVEL</h5>
+                            <h4>Explore the Pacific Northwest</h4>
+                            <p>Posted On March 8, 2015</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <img src="images/blogs/img-6.jpg" alt="">
+                        <div class="blog-info">
+                            <h5>TRAVEL</h5>
+                            <h4>Explore the Pacific Northwest</h4>
+                            <p>Posted On March 8, 2015</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-contact contact-area">
+            <div class="contact-container">
+                <h1 class="contact-title">CONTACT</h1>
+                <div class="contact-content">
+                    <div class="contact-content-up">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <p>For more information on any of our services or to talk about how we may be able to help you, please get in touch with us using the form opposite. Or you can call and follow our social media.</p>
+                            <div class="contact-info-item">
+                                <span class="info-sub-title">Phone</span>
+                                <span class="info-detail">(+12) 012 456 7890</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <span class="info-sub-title">Address</span>
+                                <span class="info-detail">01, Lorem Ipsum Road, NY, USA</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <span class="info-sub-title">E-mail</span>
+                                <span class="info-detail">example@example.com</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <span class="info-sub-title">Follow</span>
+                                <div class="follow-link">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-dribbble"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mess-box">
+                            <form action="">
+                                <input type="text" class="client-name" placeholder="Your Name">
+                                <input type="text" class="client-email" placeholder="Your Email">
+                                <input type="text-area" class="text-message" placeholder="Message" spellcheck="false" rows="8">
+                                <button type="submit" class="submit">SEND MESSAGE</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact-content-down"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="index.js"></script>
