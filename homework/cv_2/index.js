@@ -1,5 +1,6 @@
 selectSection(scaleSection, restoreSection);
 document.querySelector(".section-home").id = "section-present";
+document.querySelector(".section-home").style = `display: block; z-index: 6;`;
 document.getElementById("setting-theme-icon").addEventListener("click", function() {
     document.getElementById("setting-themes").style.right = "0";
     document.querySelector(".yellow").addEventListener("click", function() {
@@ -119,7 +120,6 @@ function scaleSection() {
                             position = absolute;
                             transition-duration: 0.5s;
                             cursor: pointer;`;
-
 
         sectionPresent.style.transform = "scaleX(0.85)";
         sectionPresent.style.top = "355px";
@@ -255,6 +255,21 @@ function hiddenAllSection(sections) {
     for (let i = 0; i < sections.length; i++) {
         sections[i].style = "display: none;"
     }
+}
+
+function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -25.344, lng: 131.036 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+    });
 }
 
 // function changeButtonSelect() {

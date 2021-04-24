@@ -336,6 +336,20 @@ main {
     letter-spacing: 1px;
     font-family: serif;
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-title::before {
+    content: "ABOUT";
+    height: 64px;
+    font-size: 64px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0.05;
 }
 
 .about-item {
@@ -633,6 +647,20 @@ main {
     letter-spacing: 1px;
     font-family: serif;
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.resume-title::before {
+    content: "RESUME";
+    height: 64px;
+    font-size: 64px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0.05;
 }
 
 .resume-content {
@@ -807,6 +835,20 @@ main {
     letter-spacing: 1px;
     font-family: serif;
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-title::before {
+    content: "PORTFOLIO";
+    height: 64px;
+    font-size: 64px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0.05;
 }
 
 .portfolio-menu {
@@ -824,6 +866,7 @@ main {
     font-weight: 600;
     line-height: 23px;
     letter-spacing: 1px;
+    margin-left: 3px;
 }
 
 .portfolio-menu li:first-of-type {
@@ -941,8 +984,8 @@ main {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: -3000px;
-    right: -3000px;
+    top: -670px;
+    right: -670px;
     background-color: #fff;
     transform: rotate(45deg) scale(3);
     z-index: 2;
@@ -982,6 +1025,20 @@ main {
     letter-spacing: 1px;
     font-family: serif;
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.blogs-title::before {
+    content: "BLOGS";
+    height: 64px;
+    font-size: 64px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0.05;
 }
 
 .blog-list {
@@ -1084,6 +1141,20 @@ main {
     letter-spacing: 1px;
     font-family: serif;
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-title::before {
+    content: "CONTACT";
+    height: 64px;
+    font-size: 64px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0.05;
 }
 
 .contact-content {
@@ -1104,7 +1175,7 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 15px;
+    padding-right: 30px;
 }
 
 .contact-info h3 {
@@ -1168,7 +1239,7 @@ main {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    margin-left: 20px;
+    margin: 0;
     box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05), 
                 0 0px 5px rgba(0, 0, 0, 0.04), 
                 0 0px 10px 10px rgba(0, 0, 0, 0.06),
@@ -1182,6 +1253,7 @@ main {
     padding: 35px;
     height: 100%;
     width: 100%;
+    border-radius: 5px;
     position: relative;
 }
 
@@ -1218,6 +1290,13 @@ main {
 .mess-box form .submit:hover {
     background-color: var(--text-color-4);
     color: var(--background-color-3);
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /*++++++++++++++++++++++++ animation ++++++++++++++++++++++++++++++++++*/
