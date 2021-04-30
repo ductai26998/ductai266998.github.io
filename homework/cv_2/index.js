@@ -1,56 +1,103 @@
 selectSection(scaleSection, restoreSection);
+slideShowTestimonial();
 document.querySelector(".section-home").id = "section-present";
 document.querySelector(".section-home").style = `display: block; z-index: 6;`;
 document.getElementById("setting-theme-icon").addEventListener("click", function() {
-    document.getElementById("setting-themes").style.right = "0";
+    toggleButton("setting-themes", "setting-theme-show");
     document.querySelector(".yellow").addEventListener("click", function() {
         document.documentElement.style.setProperty('--text-color-4', '#f5ae52');
-        document.getElementById("setting-themes").style.right = "-178px";
+        document.getElementById("setting-themes").classList.remove("setting-theme-show");
     });
     document.querySelector(".red").addEventListener("click", function() {
         document.documentElement.style.setProperty('--text-color-4', '#d94c48');
-        document.getElementById("setting-themes").style.right = "-178px";
+        document.getElementById("setting-themes").classList.remove("setting-theme-show");
     });
     document.querySelector(".green").addEventListener("click", function() {
         document.documentElement.style.setProperty('--text-color-4', '#6ac045');
-        document.getElementById("setting-themes").style.right = "-178px";
+        document.getElementById("setting-themes").classList.remove("setting-theme-show");
     });
     document.querySelector(".blue").addEventListener("click", function() {
         document.documentElement.style.setProperty('--text-color-4', '#34a3e1');
-        document.getElementById("setting-themes").style.right = "-178px";
+        document.getElementById("setting-themes").classList.remove("setting-theme-show");
     });
     document.querySelector(".purple").addEventListener("click", function() {
         document.documentElement.style.setProperty('--text-color-4', '#bb68c8');
-        document.getElementById("setting-themes").style.right = "-178px";
+        document.getElementById("setting-themes").classList.remove("setting-theme-show");
     });
     document.querySelector(".sky").addEventListener("click", function() {
         document.documentElement.style.setProperty('--text-color-4', '#6ff9ff');
-        document.getElementById("setting-themes").style.right = "-178px";
+        document.getElementById("setting-themes").classList.remove("setting-theme-show");
     })
 })
 
+document.getElementById("setting-theme-icon").addEventListener("click", () => {
+    toggleButton("setting-themes", "close-setting-themes");
+})
+
+jQuery(document).ready(function($) {
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item'
+    });
+
+    $('.portfolio-menu li').click(function(event) {
+        var type = $(this).data('type');
+
+        $('.portfolio-menu li').css({"background-color": "transparent", "color": "var(--text-color-3)"});
+        $(this).css({"background-color": "var(--text-color-4)", "color": "#000"});
+    
+        type = '.' + type;
+        $('.grid').isotope({
+            filter: type
+        })
+    })
+
+    jQuery('.portfolio-menu .all').click();
+    $('.grid').isotope({
+        filter: '.grid-item'
+    })
+});
+
+function toggleButton(idToggle, classToggle) {
+    let element = document.getElementById(idToggle);
+    element.classList.toggle(classToggle);
+}
+
+function changeButton() {
+    document.getElementById("line-1").classList.remove("line-1-after");
+    document.getElementById("line-2").classList.remove("line-2-after");
+    document.getElementById("line-3").classList.remove("line-3-after");
+
+}
+
 function selectSection(scaleSection, restoreSection) {
-    let buttonSelect = document.querySelector("#btn-select-section");
+    var buttonSelect = document.querySelector("#btn-select-section");
 
     buttonSelect.addEventListener("click", async function() {
         let buttonOpen = document.querySelector(".btn-open");
 
+        toggleButton("line-1", "line-1-after");
+        toggleButton("line-2", "line-2-after");
+        toggleButton("line-3", "line-3-after");
+
+        topFunction();
+
         if (!buttonOpen) {
             await scaleSection();
-            document.querySelector("#btn-select-section").classList.add = "btn-open";
-            console.log("test222");
+            buttonSelect.classList.add = "btn-open";
         } else {
-            await restoreSection("section-home");
-            document.querySelector("#btn-select-section").classList.remove("btn-open");
+            // await restoreSection("section-home");
+            buttonSelect.addEventListener("click", async () => {
+                await restoreSection("section-present");
+            })
+            // document.querySelector("#btn-select-section").classList.remove("btn-open");
         }
-
-        // if (buttonSelect.classList.contains("btn-open")) {
-        //     document.querySelector("#btn-select-section").classList.remove("btn-open");
-        // } else {
-        //     document.querySelector("#btn-select-section").classList.add = "btn-open";
-        // }
     });
 
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 function scaleSection() {
@@ -108,39 +155,46 @@ function scaleSection() {
 
         hiddenAllSection(sections);
 
-        sections[present].style = `display: block;
-                            position = absolute;
-                            transition-duration: 0.5s;
-                            cursor: pointer;`;
-        sections[secondSection].style = `display: block;
-                            position = absolute;
-                            transition-duration: 0.5s;
-                            cursor: pointer;`;
-        sections[thirdSection].style = `display: block;
-                            position = absolute;
-                            transition-duration: 0.5s;
-                            cursor: pointer;`;
+        sectionPresent.classList.add("section-present");
+        sections[secondSection].classList.add("section-second");
+        sections[thirdSection].classList.add("section-third");
 
-        sectionPresent.style.transform = "scaleX(0.85)";
-        sectionPresent.style.top = "355px";
-        sectionPresent.style.height = "100%";
-        sectionPresent.style.overflow = "hidden";
-        sectionPresent.style.zIndex = 5;
+        // sections[present].style = `display: block;
+        //                     position: absolute;
+        //                     transition-duration: 0.5s;
+        //                     cursor: pointer;`;
+        // sections[secondSection].style = `display: block;
+        //                     position: absolute;
+        //                     transition-duration: 0.5s;
+        //                     cursor: pointer;`;
+        // sections[thirdSection].style = `display: block;
+        //                     position: absolute;
+        //                     transition-duration: 0.5s;
+        //                     cursor: pointer;`;
 
-        sections[secondSection].style.top = "320px";
-        sections[secondSection].style.height = "100%";
-        sections[secondSection].style.overflow = "hidden";
-        sections[secondSection].style.transform = "scaleX(0.8)";
-        sections[secondSection].style.zIndex = 4;
+        // sectionPresent.style.transform = "scaleX(0.85)";
+        // sectionPresent.style.top = "355px";
+        // sectionPresent.style.height = "100%";
+        // sectionPresent.style.overflow = "hidden";
+        // sectionPresent.style.zIndex = 5;
 
-        sections[thirdSection].style.transform = "scaleX(0.75)";
-        sections[thirdSection].style.top = "285px";
-        sections[thirdSection].style.zIndex = 3;
+        // sections[secondSection].style.top = "320px";
+        // sections[secondSection].style.height = "100%";
+        // sections[secondSection].style.overflow = "hidden";
+        // sections[secondSection].style.transform = "scaleX(0.8)";
+        // sections[secondSection].style.zIndex = 4;
+
+        // sections[thirdSection].style.transform = "scaleX(0.75)";
+        // sections[secondSection].style.height = "100%";
+        // sections[secondSection].style.overflow = "hidden";
+        // sections[thirdSection].style.top = "285px";
+        // sections[thirdSection].style.zIndex = 3;
 
         // custom click on home areas
         for (let i = 0; i < homeAreas.length; i++) {
             homeAreas[i].addEventListener("click", function() {
                 restoreSection("section-home");
+                changeButton();
                 document.querySelector(".section-home").id = "section-present";
                 document.querySelector("body").style.overflow = "hidden";
                 headerMenu.style = ``;
@@ -156,6 +210,7 @@ function scaleSection() {
         for (let i = 0; i < aboutAreas.length; i++) {
             aboutAreas[i].addEventListener("click", function() {
                 restoreSection("section-about");
+                changeButton();
                 document.querySelector(".section-about").id = "section-present";
                 document.querySelector("body").style.overflow = "visible";
                 headerMenu.style = ``;
@@ -173,6 +228,7 @@ function scaleSection() {
         for (let i = 0; i < resumeAreas.length; i++) {
             resumeAreas[i].addEventListener("click", function() {
                 restoreSection("section-resume");
+                changeButton();
                 document.querySelector(".section-resume").id = "section-present";
                 document.querySelector("body").style.overflow = "visible";
                 headerMenu.style = ``;
@@ -190,6 +246,7 @@ function scaleSection() {
         for (let i = 0; i < portfolioAreas.length; i++) {
             portfolioAreas[i].addEventListener("click", function() {
                 restoreSection("section-portfolio");
+                changeButton();
                 document.querySelector(".section-portfolio").id = "section-present";
                 document.querySelector("body").style.overflow = "visible";
                 headerMenu.style = ``;
@@ -207,6 +264,7 @@ function scaleSection() {
         for (let i = 0; i < blogsAreas.length; i++) {
             blogsAreas[i].addEventListener("click", function() {
                 restoreSection("section-blogs");
+                changeButton();
                 document.querySelector(".section-blogs").id = "section-present";
                 document.querySelector("body").style.overflow = "visible";
                 headerMenu.style = ``;
@@ -224,6 +282,7 @@ function scaleSection() {
         for (let i = 0; i < contactAreas.length; i++) {
             contactAreas[i].addEventListener("click", function() {
                 restoreSection("section-contact");
+                changeButton();
                 document.querySelector(".section-contact").id = "section-present";
                 document.querySelector("body").style.overflow = "visible";
                 headerMenu.style = ``;
@@ -254,8 +313,12 @@ function restoreSection(sectionName) {
 function hiddenAllSection(sections) {
     for (let i = 0; i < sections.length; i++) {
         sections[i].style = "display: none;"
+        sections[i].classList.remove("section-present");
+        sections[i].classList.remove("section-second");
+        sections[i].classList.remove("section-third");
     }
 }
+
 
 function initMap() {
     // The location of Uluru
@@ -272,29 +335,37 @@ function initMap() {
     });
 }
 
-// function changeButtonSelect() {
-//     let buttonSelect = document.querySelector("#btn-select-section");
-//     let buttonClose = document.querySelector("#btn-close-select");
+function validateContact1() {
+    // let clientName = document.querySelector(".client-name");
+    // let clientEmail = document.querySelector(".client-email");
+    // let textMess = document.querySelector(".text-message");
 
-//     if (buttonSelect) {
-//         console.log("sec");
-//         buttonSelect.id = "btn-close-select";
-//         document.querySelector(".header-right-line-1").style = `position: absolute;
-//                                                                 top: 50%;
-//                                                                 left: 50%;
-//                                                                 transform: translate(-50%, -50%) rotate(45deg);`;
-//         document.querySelector(".header-right-line-2").style = `display: none;`;
-//         document.querySelector(".header-right-line-3").style = `position: absolute;
-//                                                                 top: 50%;
-//                                                                 left: 50%;
-//                                                                 transform: translate(-50%, -50%) rotate(-45deg);`;
+    // if ()
 
-//     } else {
-//         console.log("clo");
-//         buttonClose.id = "btn-select-section";
-//         document.querySelector(".header-right-line-1").style = ``;
-//         document.querySelector(".header-right-line-2").style = ``;
-//         document.querySelector(".header-right-line-3").style = ``;
+    let inputs = document.querySelectorAll(".mess-box input");
+    for (let i = 0; i < inputs.length; i++) {
+        // inputs[i].classList.remove("error");
+        // if (inputs[i].value == "") inputs[i].classList.add("error");
+        console.log("errrrororo: " + inputs[i].value);
+        inputs[i].style = "border-bottom: 2px solid #fff;"
+        if (inputs[i].value == "") {
+            inputs[i].style = "border-bottom: 2px solid #a62d00;"
+        }
+    }
+}
 
-//     }
-// }
+function validateContact(inputName) {
+    let input = document.querySelector(".mess-box " + inputName);
+    input.style = "border-bottom: 2px solid #fff;"
+    if (input.value == "") {
+        input.style = "border-bottom: 2px solid #a62d00;"
+    }
+}
+
+function slideShowTestimonial() {
+    const config = {
+        type: 'carousel',
+        perView: 2
+    }
+    new Glide('.glide', config).mount();
+}

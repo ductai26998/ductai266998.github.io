@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="style copy.css">
+    <link rel="stylesheet" href="index-responsive.css">
     <script src="https://kit.fontawesome.com/34949473b1.js" crossorigin="anonymous"></script>
     <title>Clarks</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <script src=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://unpkg.com/@glidejs/glide"></script>
 </head>
 
 <body>
@@ -59,9 +65,9 @@
             <div class="copy">Copyright © 2019 Clarks, All rights Reserved.</div>
         </div>
         <div id="btn-select-section" class="header-right" tabindex="1">
-            <div class="header-right-line-1"></div>
-            <div class="header-right-line-2"></div>
-            <div class="header-right-line-3"></div>
+            <div class="header-right-line-1" id="line-1"></div>
+            <div class="header-right-line-2" id="line-2"></div>
+            <div class="header-right-line-3" id="line-3"></div>
         </div>
         <div class="setting-themes" id="setting-themes">
             <div class="setting-icon" id="setting-theme-icon">
@@ -94,7 +100,7 @@
             </div>
         </section>
         <section class="section section-about about-area">
-            <div class="about-container">
+            <div class="about-container section-container">
                 <h1 class="title about-title">ABOUT</h1>
                 <div class="about-item about-info">
                     <div class="about-info-avatar">
@@ -142,53 +148,131 @@
                 </div>
                 <div class="about-item about-testimonials">
                     <h3 class="about-sub-title">Testimonials</h3>
-                    <div class="about-testimonials-content">
-                        <div class="testimonial-item per-1">
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
-                                    arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
-                            </div>
-                            <div class="person">
-                                <div class="person-info">
-                                    <div class="person-info-avt"></div>
-                                    <div class="person-info-base">
-                                        <h3 class="name">Williamson</h3>
-                                        <div class="job">Web Developer</div>
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides about-testimonials-content">
+
+                                <li class="glide__slide testimonial-item per-1">
+                                    <div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
+                                            arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
                                     </div>
-                                </div>
-                                <ul class="vote">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="testimonial-item per-1">
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
-                                    arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
-                            </div>
-                            <div class="person">
-                                <div class="person-info">
-                                    <div class="person-info-avt"></div>
-                                    <div class="person-info-base">
-                                        <h3 class="name">Williamson</h3>
-                                        <div class="job">Web Developer</div>
+                                    <div class="person">
+                                        <div class="person-info">
+                                            <div class="person-info-avt"></div>
+                                            <div class="person-info-base">
+                                                <h3 class="name">Williamson</h3>
+                                                <div class="job">Web Developer</div>
+                                            </div>
+                                        </div>
+                                        <ul class="vote">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <ul class="vote">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                            </div>
+                                </li>
+
+                                <li class="glide__slide testimonial-item per-1">
+                                    <div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
+                                            arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
+                                    </div>
+                                    <div class="person">
+                                        <div class="person-info">
+                                            <div class="person-info-avt"></div>
+                                            <div class="person-info-base">
+                                                <h3 class="name">Williamson</h3>
+                                                <div class="job">Web Developer</div>
+                                            </div>
+                                        </div>
+                                        <ul class="vote">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="glide__slide testimonial-item per-1">
+                                    <div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
+                                            arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
+                                    </div>
+                                    <div class="person">
+                                        <div class="person-info">
+                                            <div class="person-info-avt"></div>
+                                            <div class="person-info-base">
+                                                <h3 class="name">Williamson</h3>
+                                                <div class="job">Web Developer</div>
+                                            </div>
+                                        </div>
+                                        <ul class="vote">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="glide__slide testimonial-item per-1">
+                                    <div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
+                                            arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
+                                    </div>
+                                    <div class="person">
+                                        <div class="person-info">
+                                            <div class="person-info-avt"></div>
+                                            <div class="person-info-base">
+                                                <h3 class="name">Williamson</h3>
+                                                <div class="job">Web Developer</div>
+                                            </div>
+                                        </div>
+                                        <ul class="vote">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="glide__slide testimonial-item per-1">
+                                    <div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum augue, lacinia vel arcu condimentum, dictum tristique sem. Nam enim neque, mattis ut fermentum vitae, venenatis id tortor. Sed consectetur tortor ut
+                                            arcu pharetra faucibus. In tristique sollicitudin mi ac congue. Praesent efficitur feugiat nisl.</p>
+                                    </div>
+                                    <div class="person">
+                                        <div class="person-info">
+                                            <div class="person-info-avt"></div>
+                                            <div class="person-info-base">
+                                                <h3 class="name">Williamson</h3>
+                                                <div class="job">Web Developer</div>
+                                            </div>
+                                        </div>
+                                        <ul class="vote">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
+
                 </div>
+                
                 <div class="about-item about-clients">
                     <h3 class="about-sub-title">Clients</h3>
                     <ul class="client-container">
@@ -215,7 +299,7 @@
             </div>
         </section>
         <section class="section section-resume resume-area">
-            <div class="resume-container">
+            <div class="resume-container section-container">
                 <h1 class="title resume-title">RESUME</h1>
                 <div class="resume-content">
                     <div class="resume-item">
@@ -326,125 +410,111 @@
             </div>
         </section>
         <section class="section section-portfolio portfolio-area">
-            <div class="portfolio-container">
+            <div class="portfolio-container section-container">
                 <h1 class="title portfolio-title">PORTFOLIO</h1>
                 <ul class="portfolio-menu">
-                    <li class="all" tabindex="1">ALL</li>
-                    <li class="brand" tabindex="1">BRAND</li>
-                    <li class="design" tabindex="1">DESIGN</li>
-                    <li class="graphic" tabindex="1">GRAPHIC</li>
+                    <li class="all" tabindex="1" data-type="grid-item">ALL</li>
+                    <li class="brand" tabindex="1" data-type="brand">BRAND</li>
+                    <li class="design" tabindex="1" data-type="design">DESIGN</li>
+                    <li class="graphic" tabindex="1" data-type="graphic">GRAPHIC</li>
                 </ul>
-                <div class="portfolio-content">
-                    <div class="col">
-                        <div class="portfolio-item-container">
-                            <div class="item item-1">
+                <div class="grid portfolio-content" >
+                            <div class="grid-item graphic item item-1">
                                 <img src="images/portfolio/img-1.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
                                 <p>GRAPHIC</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-2">
+                           
+                            <div class=" grid-item graphic item item-2">
                                 <img src="images/portfolio/img-6.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
                                 <p>GRAPHIC</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-3">
+                            <div class="grid-item brand item item-3">
                                 <img src="images/portfolio/img-8.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
-                                <p>GRAPHIC</p>
+                                <p>BRAND</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-4">
+                            <div class="grid-item design item item-4">
                                 <img src="images/portfolio/img-10.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-video"></i>
-                                <p>GRAPHIC</p>
+                                <p>DESIGN</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="portfolio-item-container">
-                            <div class="item item-1">
+                            <div class="grid-item design item item-1">
                                 <img src="images/portfolio/img-2.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
-                                <p>GRAPHIC</p>
+                                <p>DESIGN</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-2">
+                            <div class="grid-item design item item-2">
                                 <img src="images/portfolio/img-4.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
-                                <p>GRAPHIC</p>
+                                <p>DESIGN</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-3">
+                            <div class="grid-item brand item item-3">
                                 <img src="images/portfolio/img-7.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
-                                <p>GRAPHIC</p>
+                                <p>BRAND</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-4">
+                            <div class="grid-item graphic item item-4">
                                 <img src="images/portfolio/img-11.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
                                 <p>GRAPHIC</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="portfolio-item-container">
-                            <div class="item item-1">
+                            <div class="grid-item graphic item item-1">
                                 <img src="images/portfolio/img-3.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-video"></i>
                                 <p>GRAPHIC</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-2">
+                            <div class="grid-item design item item-2">
                                 <img src="images/portfolio/img-5.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-video"></i>
-                                <p>GRAPHIC</p>
+                                <p>DESIGN</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="item item-3">
+                            <div class="grid-item graphic item item-3">
                                 <img src="images/portfolio/img-9.jpg" alt="">
                                 <div class="project-name">PROJECT NAME</div>
                                 <i class="fas fa-image"></i>
                                 <p>GRAPHIC</p>
                                 <a href=""></a>
+                                <div class="portfolio-item-container"></div>
                             </div>
-                        </div>
-                    </div>
                 </div>
+
+                
             </div>
         </section>
         <section class="section section-blogs blogs-area">
-            <div class="blogs-container">
+            <div class="blogs-container section-container">
                 <h1 class="title blogs-title">BLOGS</h1>
                 <div class="blog-list">
                     <div class="blog-item" tabindex="1">
@@ -453,7 +523,7 @@
                             <h5>TRAVEL</h5>
                             <h4>Explore the Pacific Northwest</h4>
                             <p>Posted On March 8, 2015</p>
-                            <a href="#"></a>
+                            <a href="single-blog.html"></a>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -462,7 +532,7 @@
                             <h5>TRAVEL</h5>
                             <h4>Explore the Pacific Northwest</h4>
                             <p>Posted On March 8, 2015</p>
-                            <a href="#"></a>
+                            <a href="single-blog.html"></a>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -471,7 +541,7 @@
                             <h5>TRAVEL</h5>
                             <h4>Explore the Pacific Northwest</h4>
                             <p>Posted On March 8, 2015</p>
-                            <a href="#"></a>
+                            <a href="single-blog.html"></a>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -480,7 +550,7 @@
                             <h5>TRAVEL</h5>
                             <h4>Explore the Pacific Northwest</h4>
                             <p>Posted On March 8, 2015</p>
-                            <a href="#"></a>
+                            <a href="single-blog.html"></a>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -489,7 +559,7 @@
                             <h5>TRAVEL</h5>
                             <h4>Explore the Pacific Northwest</h4>
                             <p>Posted On March 8, 2015</p>
-                            <a href="#"></a>
+                            <a href="single-blog.html"></a>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -498,14 +568,14 @@
                             <h5>TRAVEL</h5>
                             <h4>Explore the Pacific Northwest</h4>
                             <p>Posted On March 8, 2015</p>
-                            <a href="#"></a>
+                            <a href="single-blog.html"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section section-contact contact-area">
-            <div class="contact-container">
+            <div class="contact-container section-container">
                 <h1 class="title contact-title">CONTACT</h1>
                 <div class="contact-content">
                     <div class="contact-content-up">
@@ -544,9 +614,9 @@
                         </div>
                         <div class="mess-box">
                             <form action="">
-                                <input type="text" class="client-name" placeholder="Your Name">
-                                <input type="text" class="client-email" placeholder="Your Email">
-                                <input type="text-area" class="text-message" placeholder="Message" spellcheck="false" rows="8">
+                                <input type="text" class="client-name" placeholder="Your Name" oninput="validateContact('.client-name')">
+                                <input type="text" class="client-email" placeholder="Your Email" oninput="validateContact('.client-email')">
+                                <input type="text-area" class="text-message" placeholder="Message" spellcheck="false" rows="8" oninput="validateContact('.text-message')">
                                 <button type="submit" class="submit">SEND MESSAGE</button>
                             </form>
                         </div>
@@ -561,6 +631,7 @@
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkbLB8pCWJ8RfJ6qHjlf50NLyns2xT288&callback=initMap">
     </script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </body>
 
 </html>
