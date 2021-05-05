@@ -1,0 +1,55 @@
+body {
+  background-color: #d35400;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  body .square {
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    animation-name: rotate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+  body .list {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; }
+    body .list li {
+      height: 20px;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body .list li span {
+        height: 9px;
+        width: 9px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.6; }
+      body .list li span:hover {
+        height: 12px;
+        width: 12px;
+        opacity: 1; }
+      body .list li span:focus {
+        height: 15px;
+        width: 15px;
+        opacity: 1; }
+
+@keyframes rotate {
+  0% {
+    transform: perspective(150px) rotateX(0deg); }
+  50% {
+    transform: perspective(150px) rotateX(-180deg); }
+  100% {
+    transform: perspective(150px) rotateZ(180deg); } }
