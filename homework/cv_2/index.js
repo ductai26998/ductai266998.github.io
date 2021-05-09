@@ -1,3 +1,5 @@
+// import fitColumns from 'isotope-fit-columns';
+
 selectSection(scaleSection, restoreSection);
 slideShowTestimonial();
 document.querySelector(".section-home").id = "section-present";
@@ -38,6 +40,7 @@ jQuery(document).ready(function($) {
     var $grid = $('.grid').isotope({
         itemSelector: '.grid-item'
     });
+    
 
     $('.portfolio-menu li').click(function(event) {
         var type = $(this).data('type');
@@ -48,13 +51,13 @@ jQuery(document).ready(function($) {
         type = '.' + type;
         $('.grid').isotope({
             filter: type
+            // filter: type,
+            // layoutMode: 'fitColumns'
+
         })
     })
 
-    jQuery('.portfolio-menu .all').click();
-    $('.grid').isotope({
-        filter: '.grid-item'
-    })
+    
 });
 
 function toggleButton(idToggle, classToggle) {
@@ -69,7 +72,7 @@ function changeButton() {
 
 }
 
-function selectSection(scaleSection, restoreSection) {
+async function selectSection(scaleSection, restoreSection) {
     var buttonSelect = document.querySelector("#btn-select-section");
 
     buttonSelect.addEventListener("click", async function() {
@@ -96,8 +99,12 @@ function selectSection(scaleSection, restoreSection) {
 }
 
 function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    // ngan chan khong cho trang load lai vi tri cu
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    // cuon len dau trang
+    window.scrollTo(0,0);
 }
 
 function scaleSection() {
@@ -159,37 +166,6 @@ function scaleSection() {
         sections[secondSection].classList.add("section-second");
         sections[thirdSection].classList.add("section-third");
 
-        // sections[present].style = `display: block;
-        //                     position: absolute;
-        //                     transition-duration: 0.5s;
-        //                     cursor: pointer;`;
-        // sections[secondSection].style = `display: block;
-        //                     position: absolute;
-        //                     transition-duration: 0.5s;
-        //                     cursor: pointer;`;
-        // sections[thirdSection].style = `display: block;
-        //                     position: absolute;
-        //                     transition-duration: 0.5s;
-        //                     cursor: pointer;`;
-
-        // sectionPresent.style.transform = "scaleX(0.85)";
-        // sectionPresent.style.top = "355px";
-        // sectionPresent.style.height = "100%";
-        // sectionPresent.style.overflow = "hidden";
-        // sectionPresent.style.zIndex = 5;
-
-        // sections[secondSection].style.top = "320px";
-        // sections[secondSection].style.height = "100%";
-        // sections[secondSection].style.overflow = "hidden";
-        // sections[secondSection].style.transform = "scaleX(0.8)";
-        // sections[secondSection].style.zIndex = 4;
-
-        // sections[thirdSection].style.transform = "scaleX(0.75)";
-        // sections[secondSection].style.height = "100%";
-        // sections[secondSection].style.overflow = "hidden";
-        // sections[thirdSection].style.top = "285px";
-        // sections[thirdSection].style.zIndex = 3;
-
         // custom click on home areas
         for (let i = 0; i < homeAreas.length; i++) {
             homeAreas[i].addEventListener("click", function() {
@@ -245,6 +221,11 @@ function scaleSection() {
         // custom click on portfolio areas
         for (let i = 0; i < portfolioAreas.length; i++) {
             portfolioAreas[i].addEventListener("click", function() {
+                // jQuery('.portfolio-menu .all').click();
+                // $('.grid').isotope({
+                //     filter: '.grid-item'
+                // })
+                
                 restoreSection("section-portfolio");
                 changeButton();
                 document.querySelector(".section-portfolio").id = "section-present";

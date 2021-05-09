@@ -900,6 +900,11 @@ main {
     cursor: pointer;
 }
 
+.portfolio-content {
+    /* width: 100% !important; */
+    height: 1000px;
+}
+
 .portfolio-content .item {
     width: 30%;
     margin-bottom: 20px;
