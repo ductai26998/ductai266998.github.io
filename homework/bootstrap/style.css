@@ -1,64 +1,196 @@
-.form-control {
-    border: solid 1px #aaa !important;
-    box-shadow: none !important;
-}
-
-.blog-list .list-group-item {
-    border: none !important;
-    background-color: #c2bfbf;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 6px 5px rgba(0, 0, 0, 0.04), 0 12px 10px rgba(0, 0, 0, 0.06);
-
-}
-
-
-.blog-list .list-group-item:hover h4 {
-    text-decoration: underline;
-}
-
-.blog-list .list-group-item img {
-    width: 80%;
-    border-radius: 5px;
-    position: relative;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.blog-list .list-group-item .blog-info {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 20px 20px 20px;
-    text-align: center;
-}
-
-.blog-list .list-group-item .blog-info h5 {
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: var(--text-color-4);
-} 
-
-.blog-list .list-group-item .blog-info h4 {
-    font-size: 24px;
-    margin: 10px 0;
-    font-weight: 500;
-    line-height: 1.2;
-    font-family: serif;
-    padding: 0px 10px;
-}
-
-.blog-list .list-group-item .blog-info p {
-    font-size: 14px;
-    color: #7b7b7b;
-}
-
-.blog-list .list-group-item .blog-info a {
+@use "sass:list";
+body .site .site-header .banner {
+  padding: 0 !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative; }
+  @media only screen and (min-width: 720px) {
+    body .site .site-header .banner {
+      height: 280px; } }
+  body .site .site-header .banner .text {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    body .site .site-header .banner .text h1 {
+      font-family: Alegreya, serif;
+      font-weight: 400;
+      font-size: 70px;
+      line-height: 98px;
+      color: #666666;
+      color: #fff; }
+    body .site .site-header .banner .text p {
+      font-family: Alegreya, serif;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 29px;
+      color: #666666;
+      color: #fff; }
 
+body .site .site-header .nav-link {
+  font-family: "EB Garamond", serif;
+  font-size: 14px; }
+
+body .site .site-header .nav-link:hover, body .site .site-header .active {
+  color: #e8554e !important; }
+
+@media only screen and (max-width: 1014px) {
+  body .site .site-body {
+    padding: 0 auto !important; } }
+
+body .site .site-body .blog-list .row:nth-of-type(1) .blog-avt {
+  background-image: url(images/blogs/avt-1.png); }
+
+body .site .site-body .blog-list .row:nth-of-type(2) .blog-avt {
+  background-image: url(images/blogs/avt2.jpeg); }
+
+body .site .site-body .blog-list .row:nth-of-type(3) .blog-avt {
+  background-image: url(images/blogs/avt3.jpeg); }
+
+body .site .site-body .blog-list .row:nth-of-type(4) .blog-avt {
+  background-image: url(images/blogs/avt4.jpeg); }
+
+body .site .site-body .blog-list .row:nth-of-type(5) .blog-avt {
+  background-image: url(images/blogs/avt5.png); }
+
+body .site .site-body .blog-list .row:nth-of-type(6) .blog-avt {
+  background-image: url(images/blogs/avt6.png); }
+
+body .site .site-body .blog-list .row:nth-of-type(7) .blog-avt {
+  background-image: url(images/blogs/avt7.jpg); }
+
+body .site .site-body .blog-list .row:nth-of-type(8) .blog-avt {
+  background-image: url(images/blogs/avt8.jpeg); }
+
+body .site .site-body .blog-list .row:nth-of-type(9) .blog-avt {
+  background-image: url(images/blogs/avt9.jpg); }
+
+body .site .site-body .blog-list .row:nth-of-type(10) .blog-avt {
+  background-image: url(images/blogs/avt10.jpeg); }
+
+body .site .site-body .blog-list .row {
+  margin: 20px 0; }
+  body .site .site-body .blog-list .row .blog-avt {
+    height: 356px;
+    width: 356px;
+    margin: 0 24px 24px 0;
+    float: left;
+    background-size: cover; }
+    @media only screen and (max-width: 459px) {
+      body .site .site-body .blog-list .row .blog-avt {
+        height: 80vw;
+        width: 100%; } }
+  @media only screen and (max-width: 400px) {
+    body .site .site-body .blog-list .row .blog-avt {
+      margin-right: 0; } }
+  body .site .site-body .blog-list .row .blog-title {
+    font-family: Alegreya, serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    color: #666666; }
+  body .site .site-body .blog-list .row .blog-date {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #888888; }
+  body .site .site-body .blog-list .row .blog-summary {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #888888; }
+  body .site .site-body .blog-list .row .comment {
+    height: 30px;
+    background-color: #88888859;
+    border-radius: 5px;
+    color: #88888880;
+    padding: 0 !important; }
+    body .site .site-body .blog-list .row .comment i:hover {
+      color: #e8554e; }
+
+body .site .site-body .my-info .form-control {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: auto;
+  color: #888888;
+  border: 0;
+  box-shadow: none;
+  background-color: #cacaca59;
+  margin: 0 !important;
+  max-width: 500px; }
+
+body .site .site-body .my-info h4 a {
+  font-family: Alegreya, serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 29px;
+  color: #666666;
+  color: #e33028;
+  text-decoration: none; }
+
+body .site .site-body .my-info .email-form h4 {
+  font-family: Alegreya, serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 29px;
+  color: #666666; }
+
+body .site .site-body .my-info .email-form button {
+  border-radius: 5px;
+  height: 50px;
+  font-family: Alegreya, serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: auto;
+  color: #666666;
+  color: #fff;
+  font-style: italic;
+  border: 0;
+  background-color: #e8554e !important; }
+
+body .site-footer {
+  background-color: #303030; }
+  body .site-footer .container h4 {
+    font-family: Alegreya, serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    color: #666666;
+    color: #fff;
+    min-width: 200px; }
+  body .site-footer .container p {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #888888;
+    min-width: 200px; }
+  body .site-footer .container form {
+    padding: 0; }
+    body .site-footer .container form input {
+      font-family: "EB Garamond", serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: auto;
+      color: #888888;
+      border: 0;
+      box-shadow: none;
+      background-color: #fff;
+      margin: 0 !important;
+      min-width: 165px; }
+    body .site-footer .container form button {
+      border-radius: 5px;
+      height: 50px;
+      font-family: Alegreya, serif;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: auto;
+      color: #666666;
+      color: #fff;
+      font-style: italic;
+      border: 0;
+      background-color: #e8554e !important; }
