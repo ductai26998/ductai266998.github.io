@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/mycollection/font/flaticon.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <button class="button-flow-layout"
+                v-on:click="convertToFlow()"
+                v-bind:style="{
+                    backgroundColor: layout.isGridLayout ? '#4987a1' : '#c14994'
+                }"
+            >
+                <i class="flaticon-list"></i>
+            </button>
+            <button class="button-grid-layout"
+                v-on:click="convertToGrid()"
+                v-bind:style="{
+                    backgroundColor: !layout.isGridLayout ? '#4987a1' : '#c14994'
+                }"
+                >
+                <i class="flaticon-menu"></i>
+            </button>
+        </nav>
+        <div id="layout"
+            v-bind:class="{'flow-layout': !isGridLayout, 'grid-layout': isGridLayout}">
+            <div class="article"
+                v-for="article in articles">
+                <img v-bind:src="article.image.small" alt="">
+                <div>{{article.title}}</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

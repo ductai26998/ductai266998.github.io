@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <nav id="nav-bar">
+        <ul id="nav-list">
+            <li v-for="item in items"
+                v-on:click="active(item)"
+                v-bind:style="{
+                    backgroundColor: item.actived ? '#e35885' : '#5597b4'
+                }"
+            >
+                {{item.name}}
+            </li>
+        </ul>
+    </nav>
+    <p> You chose
+        <span id="chose"
+        >
+            {{chose}}
+        </span>
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
