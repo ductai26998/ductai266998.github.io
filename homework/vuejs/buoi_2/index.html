@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container w-75">
+        <h2 class="title text-center mt-3">
+            <i class="far fa-hand-point-right text-success"></i>
+            Todo List
+            <i class="far fa-hand-point-left text-success"></i>
+        </h2>
+        <div class="content d-flex flex-column">
+            <input class="add-work mx-5 mt-2 px-3" type="text" placeholder="Add new work" v-model="newItem" @keyup.enter="submit">
+            <ul class="list list-group mt-2">
+                <li class="list-group-item mt-2"
+                    v-for="item in items" :key="item.name"
+                >
+                    <div class="info d-inline-flex">
+                        <input class="m-auto" type="checkbox" 
+                            v-show="!item.editing"
+                            v-model="item.done" name="" id="">
+                        <label class="my-auto mx-2"
+                            v-show="!item.editing"
+                            :style="item.done ? doneStyle : ''"
+                        >{{item.name}}</label>
+                        <input type="text" class="w-100"
+                            v-model="editItem" 
+                            @keyup.enter="update(item)" 
+                            v-show="item.editing"
+                        >
+                    </div>
+                    <div class="button-container"
+                        v-show="item.editing"
+                    >
+                        <button class="btn btn-success mx-2" 
+                            @click="update(item)"
+                        >
+                            <i class="fas fa-check"></i>
+                        </button>
+                        <button class="btn btn-danger" 
+                            @click="cancel(item)"
+                        >
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="button-container"
+                        v-show="!item.editing"
+                    >
+                        <button class="btn btn-success mx-2" 
+                            @click="edit(item)"
+                        >
+                            <i class="far fa-edit"></i>
+                        </button>
+                        <button class="btn btn-danger"
+                            @click="deleteItem(item)"
+                        >
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

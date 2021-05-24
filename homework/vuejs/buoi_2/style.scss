@@ -1,0 +1,45 @@
+* {
+    font-family: Arial;
+    font-style: italic;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+body {
+    .container {
+
+        .content {
+            .add-work {
+                border-bottom: solid 1px greenyellow;
+            }
+
+            .list {
+                .info {
+                    max-width: 60%;
+                    word-wrap: break-word;
+                    label {
+                        width: 100%;
+                    }    
+                }
+
+                li {
+                    position: relative;
+                    border: 0;
+                    background-color: rgba(66, 66, 65, 0.116);
+                    display: flex;
+                    justify-content: space-between;
+
+                    .button-container {
+                        display: inline-flex;
+                        button {
+                            width: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
